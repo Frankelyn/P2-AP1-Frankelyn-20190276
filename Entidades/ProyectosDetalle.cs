@@ -8,17 +8,16 @@ using System.Threading.Tasks;
 
 namespace P2_AP1_Frankelyn_20190276.Entidades
 {
-    public class Proyectos
+    public class ProyectosDetalle
     {
         [Key]
+        public int ProyectoDetalleId { get; set; }
         public int ProyectoId { get; set; }
-        public DateTime Fecha { get; set; } = DateTime.Now;
+        public int TipoDeTareaId { get; set; }
+        public string Requerimiento { get; set; }
+        public int Tiempo { get; set; }
 
-        public string Descripcion { get; set; }
-
-        public int TiempoTotal { get; set; }
-
-        [ForeignKey("ProyectoId")]
-        public virtual List<ProyectosDetalle> Detalle { get; set; } = new List<ProyectosDetalle>(); 
+        [ForeignKey("TipoDeTareaId")]
+        public virtual TipoDeTarea TipoDeTarea { get; set;}
     }
 }
