@@ -12,6 +12,8 @@ namespace P2_AP1_Frankelyn_20190276.DAL
     {
         public DbSet<TipoDeTarea> TipoDeTarea { get; set; }
 
+        public DbSet<Proyectos> Proyectos { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

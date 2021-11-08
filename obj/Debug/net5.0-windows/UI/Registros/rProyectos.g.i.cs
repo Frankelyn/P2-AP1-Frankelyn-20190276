@@ -165,7 +165,7 @@ namespace P2_AP1_Frankelyn_20190276.UI.Registros {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/P2-AP1-Frankelyn-20190276;V1.0.0.0;component/ui/registros/rproyectos.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/P2-AP1-Frankelyn-20190276;component/ui/registros/rproyectos.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\UI\Registros\rProyectos.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
