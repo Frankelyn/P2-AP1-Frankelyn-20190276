@@ -58,7 +58,7 @@
                                 <DataGridTextColumn Header="TipoId" Width="120" Binding="{Binding TipoDeTarea.TipoDeTareaId}"/>
                                 <DataGridTextColumn Header="Tipo Tarea" Width="120" Binding="{Binding TipoDeTarea.Descripcion}"/>
                                 <DataGridTextColumn Header="Requerimiento" Width="250" Binding="{Binding Requerimiento}"/>
-                                <DataGridTextColumn Header="Tiempo" Width="105" Binding="{Binding Tiempo}"/>
+                                <DataGridTextColumn Header="Tiempo" Width="100" Binding="{Binding Tiempo}"/>
                             </DataGrid.Columns>
                         </DataGrid>
 

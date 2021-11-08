@@ -53,7 +53,7 @@ namespace P2_AP1_Frankelyn_20190276.UI.Registros
                 MessageBox.Show("Falta el campo Descripcion", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
-            if(DetalleDataGrid.SelectedItems.Count == 0)
+            if(DetalleDataGrid.Items.Count == 0)
             {
                 esValido = false;
                 MessageBox.Show("Debe agregar los tipos de tarea", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
