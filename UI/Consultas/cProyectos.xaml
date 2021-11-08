@@ -29,9 +29,6 @@
                     <ComboBox x:Name="FiltroComboBox" Width="220">
                         <ComboBoxItem Content="ProyectoId"/>
                         <ComboBoxItem Content="Descripcion"/>
-                        <ComboBoxItem Content="Tipo de tarea"/>
-                        <ComboBoxItem Content="Requerimiento"/>
-                        <ComboBoxItem Content="Tiempo (minutos)"/>
                         <ComboBoxItem Content="Tiempo Total"/>
                     </ComboBox>
                 </StackPanel>

@@ -36,10 +36,15 @@ namespace P2_AP1_Frankelyn_20190276.UI.Consultas
                 {
                     case 0:
                         {
-                            listado = TipoDeTareaBLL.GetList(e => e.Descripcion.ToLower().Contains(CriterioTextbox.Text.ToLower()));
+                            listado = TipoDeTareaBLL.GetList(e => e.TipoDeTareaId == Utilidades.Toint(CriterioTextbox.Text));
                             break;
                         }
                     case 1:
+                        {
+                            listado = TipoDeTareaBLL.GetList(e => e.Descripcion.ToLower().Contains(CriterioTextbox.Text.ToLower()));
+                            break;
+                        }
+                    case 2:
                         {
                             listado = TipoDeTareaBLL.GetList(e => e.TiempoAcumulado == Utilidades.Toint(CriterioTextbox.Text));
                             break;

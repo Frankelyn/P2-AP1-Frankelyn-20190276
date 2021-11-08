@@ -11,6 +11,7 @@
             <StackPanel Orientation="Horizontal" Margin="10,10,0,0" Height="32" VerticalAlignment="Top">
                 <Label Content="Campo a filtrar:" Height="40"/>
                 <ComboBox x:Name="FiltroComboBox" Margin="10,0,0,0" Height="22" Width="220">
+                    <ComboBoxItem Content="TipoDeTareaId"/>
                     <ComboBoxItem Content="Descripcion"/>
                     <ComboBoxItem Content="Tiempo acumulado"/>
                 </ComboBox>
