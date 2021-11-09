@@ -63,7 +63,9 @@ namespace P2_AP1_Frankelyn_20190276.BLL
 
                 foreach(var detalle in proyectoAnterior.Detalle)
                 {
+                    
                     detalle.TipoDeTarea.TiempoAcumulado -= detalle.Tiempo;
+                    //contexto.Entry(detalle.TipoDeTarea).State = EntityState.Modified;
                 }
 
 
