@@ -63,9 +63,10 @@ namespace P2_AP1_Frankelyn_20190276.BLL
 
                 foreach(var detalle in proyectoAnterior.Detalle)
                 {
-                    
-                    detalle.TipoDeTarea.TiempoAcumulado -= detalle.Tiempo;
-                    //contexto.Entry(detalle.TipoDeTarea).State = EntityState.Modified;
+                    var tarea = contexto.TipoDeTarea.Find(detalle.TipoDeTarea.TipoDeTareaId);
+                    tarea.TiempoAcumulado -= detalle.Tiempo;
+                    detalle.TipoDeTarea = tarea;
+                    contexto.Entry(detalle.TipoDeTarea).State = EntityState.Modified;
                 }
 
 
@@ -75,8 +76,11 @@ namespace P2_AP1_Frankelyn_20190276.BLL
 
                 foreach(var Item in Proyecto.Detalle)
                 {
-                    Item.TipoDeTarea.TiempoAcumulado += Item.Tiempo;
+                    var tarea = contexto.TipoDeTarea.Find(Item.TipoDeTarea.TipoDeTareaId);
+                    tarea.TiempoAcumulado += Item.Tiempo;
+                    Item.TipoDeTarea = tarea;
                     contexto.Entry(Item.TipoDeTarea).State = EntityState.Modified;
+                    contexto.Entry(Item).State = EntityState.Modified;
                 }
 
                 contexto.Entry(Proyecto).State = EntityState.Modified;
