@@ -22,7 +22,7 @@
 
             <StackPanel Orientation="Vertical"  Margin="10,10,0,0">
                 <Label Content="Fecha" FontSize="14"/>
-                <DatePicker Name="FechaDatePicker" Height="35" Width="145" HorizontalAlignment="Left" SelectedDate="{Binding Fecha}"/>
+                <DatePicker Name="FechaDatePicker" Height="35" Width="145" HorizontalAlignment="Left" SelectedDate="{Binding Fecha}" SelectedDateFormat="Short"/>
             </StackPanel>
 
             <StackPanel Orientation="Vertical"  Margin="10,10,0,0">
@@ -57,7 +57,7 @@
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="TipoId" Width="120" Binding="{Binding TipoDeTarea.TipoDeTareaId}"/>
                                 <DataGridTextColumn Header="Tipo Tarea" Width="120" Binding="{Binding TipoDeTarea.Descripcion}"/>
-                                <DataGridTextColumn Header="Requerimiento" Width="250" Binding="{Binding Requerimiento}"/>
+                                <DataGridTextColumn Header="Requerimiento" Width="225" Binding="{Binding Requerimiento}"/>
                                 <DataGridTextColumn Header="Tiempo" Width="100" Binding="{Binding Tiempo}"/>
                             </DataGrid.Columns>
                         </DataGrid>
