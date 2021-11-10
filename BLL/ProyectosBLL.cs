@@ -71,16 +71,16 @@ namespace P2_AP1_Frankelyn_20190276.BLL
 
 
 
-                contexto.Database.ExecuteSqlRaw($"Delete from ProyectosDetalle where ProyectoDetalleId = {Proyecto.ProyectoId}");
+                contexto.Database.ExecuteSqlRaw($"Delete from ProyectosDetalle where ProyectoId = {Proyecto.ProyectoId}");
 
 
                 foreach(var Item in Proyecto.Detalle)
                 {
+                    contexto.Entry(Item).State = EntityState.Added;
                     var tarea = contexto.TipoDeTarea.Find(Item.TipoDeTarea.TipoDeTareaId);
                     tarea.TiempoAcumulado += Item.Tiempo;
                     Item.TipoDeTarea = tarea;
                     contexto.Entry(Item.TipoDeTarea).State = EntityState.Modified;
-                    contexto.Entry(Item).State = EntityState.Modified;
                 }
 
                 contexto.Entry(Proyecto).State = EntityState.Modified;
@@ -143,6 +143,7 @@ namespace P2_AP1_Frankelyn_20190276.BLL
                 proyecto = contexto.Proyectos.Where(x => x.ProyectoId == id)
                                              .Include(x => x.Detalle)
                                              .ThenInclude(x => x.TipoDeTarea)
+                                             .AsNoTracking()
                                              .SingleOrDefault();
                                              
             }
